@@ -1,0 +1,74 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34622.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoscowWeatherApp.Settings", "MoscowWeatherApp.Settings\MoscowWeatherApp.Settings.csproj", "{2A6CF196-16DA-48A9-87D9-46765906B5FE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoscowWeatherApp.Shared", "MoscowWeatherApp.Shared\MoscowWeatherApp.Shared.csproj", "{E4033847-953F-42E2-BFBD-E5B639063270}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{555DD578-B7FB-4B23-BB15-5D7CFCFF1047}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{BB64EA38-0C05-4B00-B7C4-94FD30FA1AFE}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoscowWeatherApp.Database", "MoscowWeatherApp.Database\MoscowWeatherApp.Database.csproj", "{BCD3FBFF-C9A5-4A88-A85E-248BABB92FD7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoscowWeatherApp.Core", "MoscowWeatherApp.Core\MoscowWeatherApp.Core.csproj", "{E1191E5A-EED8-403A-95AE-E3610FB44B16}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoscowWeatherApp.Domain", "MoscowWeatherApp.Domain\MoscowWeatherApp.Domain.csproj", "{10471EF7-DC66-42A8-829D-539E61C178DA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{18D57784-AD73-4F50-82A8-CE69FEDFBBD1}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoscowWeatherApp.Server", "MoscowWeatherApp.Server\MoscowWeatherApp.Server.csproj", "{DA4EF9E6-C622-40AC-B100-1E2FF31DEA86}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoscowWeatherApp.Migration", "MoscowWeatherApp.Migration\MoscowWeatherApp.Migration.csproj", "{21E5DC53-8441-4645-AF0C-55E5DC660907}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A6CF196-16DA-48A9-87D9-46765906B5FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A6CF196-16DA-48A9-87D9-46765906B5FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A6CF196-16DA-48A9-87D9-46765906B5FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A6CF196-16DA-48A9-87D9-46765906B5FE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4033847-953F-42E2-BFBD-E5B639063270}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4033847-953F-42E2-BFBD-E5B639063270}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4033847-953F-42E2-BFBD-E5B639063270}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4033847-953F-42E2-BFBD-E5B639063270}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCD3FBFF-C9A5-4A88-A85E-248BABB92FD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCD3FBFF-C9A5-4A88-A85E-248BABB92FD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCD3FBFF-C9A5-4A88-A85E-248BABB92FD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCD3FBFF-C9A5-4A88-A85E-248BABB92FD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1191E5A-EED8-403A-95AE-E3610FB44B16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1191E5A-EED8-403A-95AE-E3610FB44B16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1191E5A-EED8-403A-95AE-E3610FB44B16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1191E5A-EED8-403A-95AE-E3610FB44B16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10471EF7-DC66-42A8-829D-539E61C178DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10471EF7-DC66-42A8-829D-539E61C178DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10471EF7-DC66-42A8-829D-539E61C178DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10471EF7-DC66-42A8-829D-539E61C178DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DA4EF9E6-C622-40AC-B100-1E2FF31DEA86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DA4EF9E6-C622-40AC-B100-1E2FF31DEA86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DA4EF9E6-C622-40AC-B100-1E2FF31DEA86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DA4EF9E6-C622-40AC-B100-1E2FF31DEA86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21E5DC53-8441-4645-AF0C-55E5DC660907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21E5DC53-8441-4645-AF0C-55E5DC660907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21E5DC53-8441-4645-AF0C-55E5DC660907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21E5DC53-8441-4645-AF0C-55E5DC660907}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BCD3FBFF-C9A5-4A88-A85E-248BABB92FD7} = {BB64EA38-0C05-4B00-B7C4-94FD30FA1AFE}
+		{E1191E5A-EED8-403A-95AE-E3610FB44B16} = {555DD578-B7FB-4B23-BB15-5D7CFCFF1047}
+		{10471EF7-DC66-42A8-829D-539E61C178DA} = {555DD578-B7FB-4B23-BB15-5D7CFCFF1047}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CBA5688A-1093-4DD3-BC8F-6365AE2D3C75}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,64 @@
+﻿@{
+    ViewData["Title"] = "Upload Excel Files";
+}
+
+<a href="/" class="btn btn-secondary mb-3">Назад</a>
+
+<h2>Загрузка архивов Excel</h2>
+
+<div class="container">
+    <form method="post" enctype="multipart/form-data" action="UploadExcelArchives">
+        <div class="form-group mb-3 text-center">
+            <input type="file" name="files" id="files" class="form-control-file" multiple style="display: none;" />
+            <label for="files" class="btn btn-primary custom-file-upload" id="fileLabel">
+                Выберите файлы
+            </label>
+        </div>
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-primary" id="uploadButton">Загрузить</button>
+        </div>
+    </form>
+    <div class="d-flex justify-content-center mt-3">
+        <div class="spinner-border text-primary d-none" role="status" id="loadingSpinner">
+            <span class="sr-only"></span>
+        </div>
+    </div>
+</div>
+
+@if (!string.IsNullOrEmpty(ViewBag.Message))
+{
+    <div class="alert alert-info mt-3">
+        @ViewBag.Message
+    </div>
+}
+
+<script>
+    document.getElementById('files').addEventListener('change', function () {
+        var files = this.files;
+        var fileLabel = document.getElementById('fileLabel');
+        if (files.length > 0) {
+            fileLabel.textContent = 'Выбрано файлов: ' + files.length;
+        } else {
+            fileLabel.textContent = 'Выберите файлы';
+        }
+    });
+
+    document.getElementById('uploadButton').addEventListener('click', function () {
+        document.getElementById('loadingSpinner').classList.remove('d-none');
+    });
+</script>
+
+<style>
+    .custom-file-upload {
+        padding: 10px 20px;
+        border-radius: 10px;
+        background-color: #084cdf;
+        color: #fff;
+        cursor: pointer;
+        transition: background .2s ease-in-out;
+    }
+
+        .custom-file-upload:hover {
+            background-color: #0d45a5;
+        }
+</style>

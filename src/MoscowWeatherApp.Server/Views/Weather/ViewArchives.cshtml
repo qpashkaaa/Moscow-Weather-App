@@ -1,0 +1,96 @@
+﻿@model MoscowWeatherApp.Server.ViewModels.ViewArchivesViewModel
+
+@{
+    ViewData["Title"] = "View Archives";
+}
+
+<a href="/" class="btn btn-secondary mb-3">Назад</a>
+
+<h2>Просмотр архивов</h2>
+
+@using (Html.BeginForm("GetWeatherTableByFilters", "Weather", FormMethod.Post))
+{
+    <div class="form-group mb-3">
+        <label for="monthNumber">Месяц:</label>
+        <select id="monthNumber" name="monthNumber" class="form-control">
+            <option value="">Выберите месяц</option>
+            @for (var i = 1; i <= 12; i++)
+            {
+                var selected = i == Model.WeatherFiltersDTO.MonthNumber ? "selected" : "";
+                <option value="@i" @selected>@System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(i)</option>
+            }
+        </select>
+    </div>
+    <div class="form-group mb-3">
+        <label for="year">Год:</label>
+        <input type="number" id="yearNumber" name="yearNumber" value="@Model.WeatherFiltersDTO.YearNumber" class="form-control" placeholder="Введите год">
+    </div>
+    <button id="submit-btn" type="submit" class="btn btn-primary mb-3">Применить фильтры</button>
+    <input type="hidden" id="pageNumber" name="pageNumber" value="@Model.WeatherFiltersDTO.PageNumber">
+}
+
+<div class="row mb-2">
+    <div class="col-auto">
+        <button type="button" class="btn btn-secondary" onclick="ChangePage(-1)">&lt;&lt;</button>
+    </div>
+    <div class="col">
+    </div>
+    <div class="col-auto">
+        <button type="button" class="btn btn-secondary" onclick="ChangePage(1)">&gt;&gt;</button>
+    </div>
+</div>
+
+<table class="table table-striped table-bordered table-hover">
+    <thead>
+        <tr>
+            <th class="text-center align-middle">Дата</th>
+            <th class="text-center align-middle">Время (московское)</th>
+            <th class="text-center align-middle">Температура воздуха, гр. Ц.</th>
+            <th class="text-center align-middle">Отн. влажность воздуха, %</th>
+            <th class="text-center align-middle">Точка росы, гр. Ц.</th>
+            <th class="text-center align-middle">Атм. давление, мм рт.ст.</th>
+            <th class="text-center align-middle">Направление ветра</th>
+            <th class="text-center align-middle">Скорость ветра, м/с</th>
+            <th class="text-center align-middle">Облачность, %</th>
+            <th class="text-center align-middle">Нижняя граница облачности, м</th>
+            <th class="text-center align-middle">Горизонтальная видимость, км</th>
+            <th class="text-center align-middle">Погодные явления</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.WeatherInfo)
+        {
+            <tr>
+                <td class="text-center align-middle">@item.Date</td>
+                <td class="text-center align-middle">@item.Time</td>
+                <td class="text-center align-middle">@item.Temperature</td>
+                <td class="text-center align-middle">@item.RelativeHamidity</td>
+                <td class="text-center align-middle">@item.DewPoint</td>
+                <td class="text-center align-middle">@item.AtmosphericPressure</td>
+                <td class="text-center align-middle">@item.WindDirection</td>
+                <td class="text-center align-middle">@item.WindSpeed</td>
+                <td class="text-center align-middle">@item.CloudCover</td>
+                <td class="text-center align-middle">@item.LowerLimitCloudCover</td>
+                <td class="text-center align-middle">@item.HorizontalVisibility</td>
+                <td class="text-center align-middle">@item.WeatherPhenomena</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<script>
+    function ChangePage(delta) {
+        var currentPage = parseInt(document.getElementById('pageNumber').value);
+        var newPage = currentPage + delta;
+        if (newPage >= 1) {
+            document.getElementById('pageNumber').value = newPage;
+            document.forms[0].submit();
+        }
+    }
+
+    document.getElementById('submit-btn').addEventListener('click', function () {
+        document.getElementById('pageNumber').value = 1;
+    });
+</script>
+
+

@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Moscow Weather App";
+}
+
+<h2>Главное меню</h2>
+
+<div class="container">
+    <div class="d-flex flex-column align-items-center mt-3">
+        <form action="Weather/UploadArchives" method="get" class="mb-3">
+            <button type="submit" class="btn btn-primary">Загрузка файловых архивов</button>
+        </form>
+        <form action="Weather/ViewArchives" method="get">
+            <button type="submit" class="btn btn-secondary">Просмотр архивов</button>
+        </form>
+    </div>
+</div>
